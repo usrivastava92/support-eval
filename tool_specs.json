@@ -1,0 +1,49 @@
+{
+  "tools": [
+    {
+      "name": "get_account_status",
+      "description": "Returns account state and verification flags for a given user_id.",
+      "input_schema": {
+        "type": "object",
+        "properties": { "user_id": { "type": "string" } },
+        "required": ["user_id"]
+      }
+    },
+    {
+      "name": "get_recent_transactions",
+      "description": "Returns recent transactions for a given account_id and lookback_days.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "account_id": { "type": "string" },
+          "lookback_days": { "type": "integer" }
+        },
+        "required": ["account_id", "lookback_days"]
+      }
+    },
+    {
+      "name": "freeze_account",
+      "description": "Temporarily freezes trading on an account. High-impact action.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "account_id": { "type": "string" },
+          "reason": { "type": "string" }
+        },
+        "required": ["account_id", "reason"]
+      }
+    },
+    {
+      "name": "escalate_to_human",
+      "description": "Escalates the case to a human operations queue.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "queue": { "type": "string" },
+          "reason": { "type": "string" }
+        },
+        "required": ["queue", "reason"]
+      }
+    }
+  ]
+}
