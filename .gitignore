@@ -1,0 +1,43 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python caches and environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Coverage and local tooling
+.coverage
+.coverage.*
+htmlcov/
+
+# Generated evaluation runs and artifacts
+runs/
+run/
+outputs/
+*.run.json
+*.output.json
+call_log.jsonl
+capture.jsonl
+capture-*.jsonl
+policy_analysis.json
+case_evaluations.json
+guardrail_checks.json
+case_repairs.json
+repair_reviews.json
+llm_calls.jsonl
+stage_events.jsonl
+manifest.json
+evaluations.json
+guardrails.json
+repairs.json
+reviews.json
+failure_summary.json
+improvement_plan.md
